@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acqua By Salud</title>
+  <meta name="description"
+    content="Acqua By Salud – Agua purificada. Página en construcción con formulario de contacto y cuenta regresiva." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-p1CmS8FxZPqDW7Ik5+pUvNbK/CtYQgQki71R+xVQ1BM8DT6vKrrf5gkP7FpC18JNpD33rDg14u9gH7C0C+DnJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header class="pt-4">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a class="d-inline-flex align-items-center text-decoration-none" href="#" aria-label="Acqua By Salud inicio">
+        <div><img src="img/logo_navbar.png" alt="" style="height: 30px;"></div>
+      </a>
+      <div class="brand-badge" style="background-color: rgb(160, 160, 236); color: aliceblue; margin-bottom: 20px;">
+        <span class="dot"></span>
+        WEB EN CONSTRUCCIÓN
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+
+    <!-- floating bubbles -->
+    <div class="bubble b1" aria-hidden="true"></div>
+    <div class="bubble b2" aria-hidden="true"></div>
+    <div class="bubble b3" aria-hidden="true"></div>
+    <div class="bubble b4" aria-hidden="true"></div>
+
+    <div class="container position-relative py-5">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <h1 class="display-hero display-4 mb-3">Estamos preparando algo <span
+              style="color:var(--blue-500)">cristalino</span> 💧</h1>
+          <p class="lead-hero mb-4">Muy pronto podrás conocer el nuevo sistema de <strong>agua purificada</strong> de
+            Acqua By Salud. Mientras tanto, cuéntanos cómo podemos ayudarte y te contactamos.</p>
+          <a class="btn-whatsapp" href="https://wa.me/+34699027867" target="_blank" rel="noopener"
+            aria-label="WhatsApp">
+            <svg viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+              <path fill="currentColor"
+                d="M380.9 97.1C339 55.1 283.2 32 224.6 32 106.1 32 10.7 127.4 10.7 245.9c0 37.7 9.9 74.5 28.7 107.1L0 480l129.6-38.1c31.8 17.4 67.7 26.6 104.5 26.6h.1c118.6 0 214-95.4 214-213.9 0-58.6-23.1-114.4-65.3-156.5zM224.2 426.6h-.1c-32.6 0-64.7-8.8-92.6-25.4l-6.6-3.9-76.8 22.6 22.9-74.9-4.1-7.1c-17.8-30-27.2-64.5-27.2-99.9 0-108 88-196 196.2-196 52.4 0 101.6 20.4 138.6 57.5 37 37 57.4 86.2 57.4 138.7 0 108-88 196-197.7 196z" />
+            </svg>
+            <span>Escríbenos por WhatsApp</span>
+          </a>
+          <div class="mt-4">
+            <small class="text-secondary">Transparencia, sabor y seguridad — directo a tu grifo.</small>
+          </div>
+        </div>
+
+
+        <div class="col-lg-5" >
+          <div class="card card-water p-4 rounded-4" style="border: none;">
+            <form action="https://formsubmit.co/info@acquabysalud.com" method="POST">
+              <div class="form-card-header">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="drop" aria-hidden="true">💧</div>
+                  <div>
+                    <h2 class="h5 mb-1">Déjanos tus datos</h2>
+                    <p class="form-sub mb-0">Te avisamos del lanzamiento y promos exclusivas.</p>
+                  </div>
+                </div>
+                <div class="d-flex flex-wrap badges mt-3" style="margin-bottom: 20px;">
+                  <span class="badge">✔ Respuesta en 24h</span>
+                  <span class="badge">🔒 Datos seguros</span>
+                  <span class="badge">💬 Asesoría gratuita</span>
+                </div>
+              </div>
+              <!-- Campos -->
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="telefono" class="form-label">Teléfono</label>
+                  <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="+34 600 000 000">
+                </div>
+                <div class="col-12">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="tu@email.com" required>
+                </div>
+                <div class="col-12">
+                  <label for="mensaje" class="form-label">Mensaje</label>
+                  <textarea id="mensaje" name="mensaje" class="form-control" rows="3"
+                    placeholder="Quiero un equipo para mi hogar/oficina..."></textarea>
+                </div>
+
+                <!-- Requerido por RGPD -->
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="privacidad" required>
+                    <label class="form-check-label" for="privacidad">Acepto la política de privacidad</label>
+                  </div>
+                </div>
+
+                <!-- Opciones de FormSubmit -->
+                <input type="hidden" name="_subject" value="Nuevo lead desde Vitaqua">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <!-- Redirección tras enviar (cámbiala si quieres) -->
+                <input type="hidden" name="_next" value="https://acquabysalud.com/">
+                <!-- Honeypot anti-spam (no borrar) -->
+                <input type="text" name="_honey" style="display:none">
+                <!-- Desactiva el reenvío de archivos -->
+                <input type="hidden" name="_autoresponse"
+                  value="¡Gracias! Hemos recibido tu mensaje y te contactaremos pronto.">
+
+                <div class="col-12 d-grid">
+                  <button class="btn-water-custom" type="submit">Enviar consulta</button>
+
+                  </button>
+                </div>
+            </form>
+          </div>
+        </div>
+  </section>
+
+
+  <footer class="py-3">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <p class="mb-0">© <span id="year"></span> Acqua By Salud</p>
+      <div class="social d-flex gap-2">
+        <!-- Usamos SVG inline para evitar bloqueos de fuentes/ads y asegurar visibilidad -->
+        <a href="https://www.instagram.com/acqua_bysalud/?hl=es" aria-label="Instagram" title="Instagram">
+          <svg width="18" height="18" viewBox="0 0 448 512" role="img" aria-hidden="true">
+            <path fill="currentColor"
+              d="M224 202.66A53.34 53.34 0 1 0 277.34 256 53.38 53.38 0 0 0 224 202.66Zm124.71-41a54 54 0 0 0-30.55-30.55C296.4 121 224 121 224 121s-72.4 0-94.16 10.11a54 54 0 0 0-30.55 30.55C89.17 173.4 89.17 246 89.17 246s0 72.4 10.11 94.16a54 54 0 0 0 30.55 30.55C151.6 380.83 224 380.83 224 380.83s72.4 0 94.16-10.11a54 54 0 0 0 30.55-30.55C358.83 318.4 358.83 246 358.83 246s0-72.6-10.12-94.34ZM224 338a82 82 0 1 1 82-82 82 82 0 0 1-82 82Zm85.34-148.34a19.14 19.14 0 1 1 19.14-19.14 19.15 19.15 0 0 1-19.14 19.14Z" />
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61583515193634" aria-label="Facebook" title="Facebook">
+          <svg width="18" height="18" viewBox="0 0 320 512" role="img" aria-hidden="true">
+            <path fill="currentColor"
+              d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+          </svg>
+        </a>
+        <a href="https://wa.me/+34699027867" aria-label="WhatsApp" title="WhatsApp">
+          <svg width="18" height="18" viewBox="0 0 448 512" role="img" aria-hidden="true">
+            <path fill="currentColor"
+              d="M380.9 97.1C339 55.1 283.2 32 224.6 32 106.1 32 10.7 127.4 10.7 245.9c0 37.7 9.9 74.5 28.7 107.1L0 480l129.6-38.1c31.8 17.4 67.7 26.6 104.5 26.6h.1c118.6 0 214-95.4 214-213.9 0-58.6-23.1-114.4-65.3-156.5zM224.2 426.6h-.1c-32.6 0-64.7-8.8-92.6-25.4l-6.6-3.9-76.8 22.6 22.9-74.9-4.1-7.1c-17.8-30-27.2-64.5-27.2-99.9 0-108 88-196 196.2-196 52.4 0 101.6 20.4 138.6 57.5 37 37 57.4 86.2 57.4 138.7 0 108-88 196-197.7 196zm115.2-146.5c-6.3-3.1-37.3-18.4-43.1-20.5-5.8-2.1-10-3.1-14.3 3.1-4.2 6.3-16.4 20.5-20.1 24.7-3.7 4.2-7.4 4.7-13.7 1.6-6.3-3.1-26.5-9.8-50.5-31.4-18.7-16.7-31.4-37.4-35.1-43.7-3.7-6.3-.4-9.7 2.8-12.8 2.9-2.9 6.3-7.4 9.4-11.1 3.1-3.7 4.2-6.3 6.3-10.5 2.1-4.2 1.1-7.9-.5-11-1.6-3.1-14.3-34.5-19.6-47.2-5.2-12.5-10.5-10.8-14.3-11-3.7-.2-7.9-.2-12-.2s-11 1.6-16.8 7.9c-5.8 6.3-22.1 21.6-22.1 52.7 0 31.1 22.6 61.1 25.7 65.3 3.1 4.2 44.5 67.9 107.8 95.2 15.1 6.5 26.9 10.4 36.1 13.3 15.2 4.8 29.1 4.1 40.1 2.5 12.2-1.8 37.3-15.2 42.6-29.8 5.3-14.6 5.3-27 3.7-29.8-1.6-2.8-5.8-4.4-12.1-7.5z" />
+          </svg>
+        </a>
+      </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN6jIeHzj5L"
+    crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
