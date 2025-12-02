@@ -114,7 +114,7 @@ body {
   min-height: 100vh;
   color: var(--acqua-text-light);
   display: flex;
-  
+
   background-image:
     linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(3, 35, 100, 0.85)),
     url("/img/hero_home.png");
@@ -128,8 +128,10 @@ body {
 .hero .hero-content {
   position: relative;
   z-index: 1;
-  justify-content: center; /* centra horizontalmente */
-  align-items: center;      /* centra verticalmente si tienen altura distinta */
+  justify-content: center;
+  /* centra horizontalmente */
+  align-items: center;
+  /* centra verticalmente si tienen altura distinta */
 }
 
 
@@ -1000,7 +1002,57 @@ body {
   }
 }
 
+/* SECCIÓN VACANTES */
+.vacancy-card {
+  border-radius: 1.25rem;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+  height: 100%;
+}
 
+.vacancy-card:hover {
+  border-color: rgba(27, 154, 170, 0.5);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.badge-area {
+  background-color: rgba(27, 154, 170, 0.08);
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* FORMULARIO */
+.apply-section {
+  background-color: #ffffff;
+  padding: 4rem 0;
+}
+
+.form-card {
+  border-radius: 1.5rem;
+  border: none;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.06);
+  background-color: #edeef0;
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(27, 154, 170, 0.25);
+  border-color: var(--primary-color);
+}
+
+.btn-primary-custom {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  border-radius: 999px;
+  padding: 0.6rem 1.6rem;
+  font-weight: 600;
+}
+
+.btn-primary-custom:hover {
+  background-color: #157784;
+  border-color: #157784;
+}
 
 
 /* Responsive */
@@ -1043,121 +1095,129 @@ body {
   }
 }
 
- /* BOTÓN PRINCIPAL */
-  #accesibilidadWidget {
-    position: fixed;
-    bottom: 100px; /* Encima del botón de WhatsApp */
-    right: 20px;
-    background: #7457cc;            /* FONDO SÓLIDO */
-    color: #fff;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-    cursor: pointer;
-    z-index: 9999;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    transition: 0.2s;
-  }
+/* BOTÓN PRINCIPAL */
+#accesibilidadWidget {
+  position: fixed;
+  bottom: 100px;
+  /* Encima del botón de WhatsApp */
+  right: 20px;
+  background: #7457cc;
+  /* FONDO SÓLIDO */
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: 0.2s;
+}
 
-  #accesibilidadWidget:hover {
-    transform: scale(1.08);
-    background: #5e43ad; /* ligero aclarado al hover */
-  }
+#accesibilidadWidget:hover {
+  transform: scale(1.08);
+  background: #5e43ad;
+  /* ligero aclarado al hover */
+}
 
-  /* MENÚ DE OPCIONES */
-  #accesibilidadMenu {
-    position: fixed;
-    bottom: 165px;
-    right: 20px;
-    background: #ffffff;
-    padding: 12px;
-    border-radius: 12px;
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    z-index: 9999;
-    width: 180px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.25);
-  }
+/* MENÚ DE OPCIONES */
+#accesibilidadMenu {
+  position: fixed;
+  bottom: 165px;
+  right: 20px;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 12px;
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 9999;
+  width: 180px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
 
-  #accesibilidadMenu button {
-    padding: 8px;
-    border: none;
-    background: #efefef;
-    cursor: pointer;
-    border-radius: 6px;
-    font-size: 14px;
-  }
+#accesibilidadMenu button {
+  padding: 8px;
+  border: none;
+  background: #efefef;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+}
 
-    #whatsappBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-    padding: 10px;
-    border-radius: 50%;
-    }
+#whatsappBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 10px;
+  border-radius: 50%;
+}
 
-    #whatsappBtn:hover {
-    transform: scale(1.08);}
+#whatsappBtn:hover {
+  transform: scale(1.08);
+}
 
-    #scrollTopBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 85px; /* Justo a la izquierda del WhatsApp */
-    width: 55px;
-    height: 55px;
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 22px;
-    cursor: pointer;
-    z-index: 9999;    
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, transform 0.3s;
-  }
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 85px;
+  /* Justo a la izquierda del WhatsApp */
+  width: 55px;
+  height: 55px;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, transform 0.3s;
+}
 
-  #scrollTopBtn.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
+#scrollTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 
-  #scrollTopBtn:hover {
-    transform: scale(1.1);
-  }#scrollTopBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 85px; /* Justo a la izquierda del WhatsApp */
-    width: 55px;
-    height: 55px;
-    color: #5e43ad;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 22px;
-    cursor: pointer;
-    z-index: 9999;
-    
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, transform 0.3s;
-  }
+#scrollTopBtn:hover {
+  transform: scale(1.1);
+}
 
-  #scrollTopBtn.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 85px;
+  /* Justo a la izquierda del WhatsApp */
+  width: 55px;
+  height: 55px;
+  color: #5e43ad;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 9999;
 
-  #scrollTopBtn:hover {
-    transform: scale(1.1);
-  }
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#scrollTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#scrollTopBtn:hover {
+  transform: scale(1.1);
+}

@@ -69,3 +69,38 @@ const scrollBtn = document.getElementById("scrollTopBtn");
       behavior: "smooth"
     });
   });
+
+  // Scroll suave a formulario desde botones "Aplicar"
+    document.querySelectorAll(".btn-aplicar").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var puesto = this.getAttribute("data-puesto");
+        var selectPuesto = document.getElementById("puesto");
+        selectPuesto.value = puesto;
+
+        document.getElementById("formulario").scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    });
+
+    // Validación básica de formulario + mensaje de éxito (frontend)
+    (function () {
+      const form = document.getElementById("form-trabaja");
+      const mensajeExito = document.getElementById("mensaje-exito");
+
+      form.addEventListener("submit", function (event) {
+        // Validación nativa de Bootstrap
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        } else {
+          // Aquí iría tu lógica real de envío (fetch, AJAX, etc.)
+          event.preventDefault(); // evitar envío real en este ejemplo
+          mensajeExito.classList.remove("d-none");
+          form.reset();
+          form.classList.remove("was-validated");
+          return;
+        }
+        form.classList.add("was-validated");
+      });
+    })();
