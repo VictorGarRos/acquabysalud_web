@@ -160,7 +160,7 @@ body {
 
 .features-box {
   background: #274a84;
-  border-radius: 40px;
+  border-radius: 20px;
   padding: 25px 40px;
   color: #fff;
   gap: 25px;
@@ -1011,7 +1011,7 @@ body {
 }
 
 .vacancy-card:hover {
-  border-color: rgba(27, 154, 170, 0.5);
+  border-color: #1f74d4;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
   transform: translateY(-2px);
 }
@@ -1050,9 +1050,33 @@ body {
 }
 
 .btn-primary-custom:hover {
-  background-color: #157784;
-  border-color: #157784;
+  background-color: #1f74d4;
+  border-color: #1f74d4;
+  color: white;
 }
+
+/* BOTONES VACANTES*/
+
+.btn-aplicar {
+  border-width: 1px;
+  transition: all 0.25s ease;
+}
+
+.btn-aplicar:hover {
+  background: linear-gradient(135deg, #4a90e2, #007aff);
+  color: #fff !important;
+  border-color: transparent;
+  box-shadow: 0 6px 18px rgba(0, 122, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-aplicar:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.25);
+}
+
+
+
 
 
 /* Responsive */
@@ -1079,13 +1103,49 @@ body {
     margin-inline: auto;
   }
 
-  .hero-product-img {
-    margin-top: 2rem;
-    max-width: 260px;
-  }
-}
 
-@media (max-width: 575.98px) {
+  .features-bar {
+    background: transparent;
+    padding: 0;
+    margin-top: -10px;
+    /* opcional si quieres que suba un poco */
+  }
+
+  .features-box {
+    background: #274a84;
+    border-radius: 20px;
+    padding: 25px 25px;
+    color: #fff;
+    gap: 10px;
+  }
+
+  /* SECCIÓN POR QUÉ ELEGIR */
+  .why-section {
+    /*background: linear-gradient(to bottom, #0a56d1, #07429f);*/
+    color: #fff;
+    padding: 3.5rem 0;
+    text-align: center;
+    margin-top: -350px;
+    z-index: 50;
+    position: relative;
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 70vh;
+    color: var(--acqua-text-light);
+    display: flex;
+    background-image:
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(3, 35, 100, 0.85)),
+      url("/img/hero_home.png");
+    /* <-- cambia por tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding-top: 30px;
+  }
+
   .why-card {
     border-radius: 1.2rem;
   }
@@ -1093,7 +1153,24 @@ body {
   .top-bar {
     text-align: center;
   }
+
+  .hero-product-img {
+    max-width: 70%;
+    height: auto;
+    display: flex;
+    margin-inline: auto;
+    /* sombra para que destaque */
+    filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.35));
+    margin-bottom: 270px;
+    justify-content: center;
+    /* centra horizontalmente */
+    align-items: center;
+    /* centra verticalmente si tienen altura distinta */
+  }
+
+
 }
+
 
 /* BOTÓN PRINCIPAL */
 #accesibilidadWidget {
