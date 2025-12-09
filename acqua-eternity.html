@@ -12,112 +12,202 @@
   <!-- (Opcional) Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" href="img/logo_wh.png">
+  <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
 </head>
 
+
+<style>
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 90vh;
+    color: var(--acqua-text-light);
+    display: flex;
+
+    background-image:
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(3, 35, 100, 0.85)),
+      url("/img/hero_eternity.png");
+    /* <-- cambia por tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding-top: 100px;
+  }
+
+  .hero .hero-content {
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+    /* centra horizontalmente */
+    align-items: center;
+    /* centra verticalmente si tienen altura distinta */
+    margin-top: 50px;
+  }
+
+  /* SECCIÓN POR QUÉ ELEGIR */
+  .why-section {
+    /*background: linear-gradient(to bottom, #0a56d1, #07429f);*/
+    color: #fff;
+    padding: 3.5rem 0;
+    text-align: center;
+    margin-top: -100px;
+    z-index: 50;
+    position: relative;
+  }
+
+
+
+  .features-bar {
+    background: transparent;
+    padding: 0;
+    margin-top: -40px;
+    /* opcional si quieres que suba un poco */
+  }
+
+  /* IMAGEN */
+  .beneficios-img {
+    flex: 1;
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    /* color de fondo gris clarito como la maqueta */
+  }
+
+  .beneficios-img img {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    display: flex;
+    object-fit: contain;
+  }
+
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero .hero-content {
+      position: relative;
+      z-index: 1;
+      justify-content: center;
+      /* centra horizontalmente */
+      align-items: center;
+      /* centra verticalmente si tienen altura distinta */
+      padding-top: 10px !important;
+    }
+
+    .fuente-pie {
+      width: 100%;
+    }
+  }
+</style>
+
+
 <body>
 
+  <div class="fixed-top">
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <div class="container d-flex justify-content-center align-items-center flex-wrap gap-2">
+        <div class="d-flex flex-wrap gap-3">
+          <span><i class="bi bi-telephone"></i> Teléfono: 699 027 867</span>
+          <span><i class="bi bi-envelope"></i> <a href="mailto:info@acquabysalud.es">info@acquabysalud.es</a></span>
+        </div>
 
-  <!-- TOP BAR -->
-  <div class="top-bar">
-    <div class="container d-flex justify-content-center align-items-center flex-wrap gap-2">
-      <div class="d-flex flex-wrap gap-3">
-        <span><i class="bi bi-telephone"></i> Teléfono: 900 525 147</span>
-        <span><i class="bi bi-envelope"></i> <a href="mailto:info@acquabysalud.es">info@acquabysalud.es</a></span>
+        <a href="trabaja-con-nosotros.html" class="text-uppercase" style="color: rgb(83, 222, 32);">
+          <i class="fa-solid fa-arrow-right"></i></i> <b>Trabaja con nosotros</b>
+        </a>
       </div>
-
-      <a href="trabaja-con-nosotros.html" class="text-uppercase" style="color: rgb(83, 222, 32);">
-        <i class="fa-solid fa-arrow-right"></i></i> <b>Trabaja con nosotros</b>
-      </a>
     </div>
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg main-nav">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <!-- LOGO -->
+          <img src="img/logo_wh.png" alt="Acqua by Salud"> <!-- cambia la ruta -->
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item dropdown custom-dd">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                Dispositivos y Filtración
+              </a>
+
+              <ul class="dropdown-menu custom-menu">
+                <li>
+                  <a class="custom-item" href="acqua-eternity.html">
+                    <img src="img/icono_fuente.png" alt="">
+                    <span>→ Dispositivo Acqua Eternity</span>
+                  </a>
+                </li>
+
+                <li>
+                  <div class="custom-divider"></div>
+                </li>
+
+                <li>
+                  <a class="custom-item" href="acqua-essence.html">
+                    <img src="img/icono_sobremesa.png" alt="">
+                    <span>→ Dispositivo Acqua Essence</span>
+                  </a>
+                </li>
+
+                <li>
+                  <div class="custom-divider"></div>
+                </li>
+
+                <li>
+                  <a class="custom-item" href="osmosis.html">
+                    <img src="img/icono_osmosis.png" alt="">
+                    <span>→ Dispositivo Osmósis</span>
+                  </a>
+                </li>
+
+                <li>
+                  <div class="custom-divider"></div>
+                </li>
+
+                <li>
+                  <a class="custom-item" href="ozono-optimal.html">
+                    <img src="img/icono_ozono.png" alt="">
+                    <span>→ Ozono Optimal</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">
+                Contacto
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </div>
 
-
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg main-nav">
-    <div class="container">
-      <a class="navbar-brand" href="/">
-        <!-- LOGO -->
-        <img src="img/logo_wh.png" alt="Acqua by Salud"> <!-- cambia la ruta -->
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Nosotros</a>
-          </li>
-          <li class="nav-item dropdown custom-dd">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-              Dispositivos y Filtración
-            </a>
-
-            <ul class="dropdown-menu custom-menu">
-              <li>
-                <a class="custom-item" href="#">
-                  <img src="img/icono_fuente.png" alt="">
-                  <span>→ Dispositivo Acqua eternity</span>
-                </a>
-              </li>
-
-              <li>
-                <div class="custom-divider"></div>
-              </li>
-
-              <li>
-                <a class="custom-item" href="#">
-                  <img src="img/icono_sobremesa.png" alt="">
-                  <span>→ Dispositivo Acqua essence</span>
-                </a>
-              </li>
-
-              <li>
-                <div class="custom-divider"></div>
-              </li>
-
-              <li>
-                <a class="custom-item" href="#">
-                  <img src="img/icono_osmosis.png" alt="">
-                  <span>→ Dispositivo Osmósis</span>
-                </a>
-              </li>
-
-              <li>
-                <div class="custom-divider"></div>
-              </li>
-
-              <li>
-                <a class="custom-item" href="#">
-                  <img src="img/icono_ozono.png" alt="">
-                  <span>→ Ozono optimal</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="contacto.html">
-              Contacto
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-
   <!-- SECCIÓN HERO -->
-  <section class="hero">
+  <section class="hero" style="margin-top: 0px;">
     <div class="container">
       <div class="row align-items-center">
         <!-- Texto -->
-        <div class="col-lg-6 hero-content">
+        <div class="col-lg-6 hero-content" style="padding-top: 80px;">
           <img src="img/logo_wh.png" alt="Acqua by salud" class="hero-logo">
           <!-- o puedes usar solo texto:
           <h2 class="display-5 fw-bold">ACQUA <span class="fw-light">by salud</span></h2> -->
@@ -134,13 +224,6 @@
             <span class="arrow">→</span> PROBAR AGUA PURIFICADA
           </a>
         </div>
-
-        <!-- Imagen producto con animación -->
-        <!-- Imagen producto -->
-        <div class="col-lg-6 mt-4 mt-lg-0">
-          <img src="img/iconos_productos.png" alt="Dispensadores de agua Acqua" class="hero-product-img">
-        </div>
-
       </div>
     </div>
   </section>
@@ -149,13 +232,6 @@
   <!-- SECCIÓN POR QUÉ ELEGIR ACQUA -->
   <section class="why-section">
     <div class="container">
-      <h2>Por qué elegir Acqua by salud</h2>
-      <p class="description">
-        Elegir AcquabySalud es invertir en calidad. Nuestros purificadores cuentan con
-        sistemas de filtración de última generación, larga durabilidad y un servicio
-        técnico cercano que te acompaña en todo momento. Obtén agua más segura, ahorra
-        en agua embotellada y disfruta de una solución diseñada para durar.
-      </p>
 
       <div class="features-bar p-3">
         <div class="container">
@@ -163,21 +239,21 @@
 
             <div class="feature-item text-center">
               <img src="img/icono_sostenibilidad.png" alt="">
-              <p>Ahorro y<br>Sostenibilidad</p>
+              <p>Sin y<br>Garrafones</p>
             </div>
 
             <div class="divider"></div>
 
             <div class="feature-item text-center">
               <img src="img/icono_instalacion.png" alt="">
-              <p>Instalación y<br>Soporte</p>
+              <p>Conectada<br>a la red</p>
             </div>
 
             <div class="divider"></div>
 
             <div class="feature-item text-center">
               <img src="img/icono_equipos.png" alt="">
-              <p>Equipos diseñados<br>para durar</p>
+              <p>Integrable en<br>cualquier espacio</p>
             </div>
 
           </div>
@@ -188,33 +264,35 @@
 
 
   <!-- SECCIÓN COCINA -->
-  <section class="quality-section p-3">
+  <section class="quality-section" style="margin-bottom: 50px;">
     <div class="container">
       <div class="row align-items-center">
 
         <!-- TEXTO -->
         <div class="col-lg-6 mb-4 mb-lg-0">
           <h2 class="quality-title">
-            Calidad y seguridad<br>
-            garantizada
+            Agua purificada siempre disponible
           </h2>
 
-          <p class="quality-text">
-            En AcquabySalud creemos que la salud empieza por el agua que consumes.
-            Por eso, seleccionamos dispositivos de purificación de la más alta
-            calidad, diseñados para ofrecerte un agua más limpia, libre de impurezas y
-            con un sabor natural. Nuestra misión es ayudarte a cuidar tu bienestar y el
-            de tu familia con soluciones confiables, duraderas y fáciles de usar.
-          </p>
+          <p>
+            Disfruta agua pura, segura y de excelente sabor las 24 horas del día.
+            Nuestra fuente de pie Acqua by Salud se conecta directamente a la red y purifica el agua en tiempo real,
+            eliminando impurezas, cloro, sedimentos y microorganismos.
+            Una solución moderna, eficiente y pensada para ofrecer hidratación de calidad sin esfuerzo.
+            <br><br>
+            → Sin garrafones <br>
+            → Sin cargas pesadas <br>
+            → Sin plásticos <br>
+            → Sin interrupciones <br> <br>
 
-          <a href="contacto.html" class="btn-quality">
-            <span class="arrow">→</span> Solicita demo
-          </a>
+            Perfecta para hogares, oficinas, comercios y espacios donde se necesita un flujo constante de agua
+            saludable.
+          </p>
         </div>
 
         <!-- IMAGEN -->
         <div class="col-lg-6">
-          <img src="img/cocina_home.png" alt="Dispensador Acqua" class="quality-img">
+          <img src="img/fuente_ofi.png" alt="Dispensador Acqua" class="quality-img">
         </div>
 
       </div>
@@ -222,119 +300,53 @@
   </section>
 
 
-  <!-- SECCIÓN NIÑOS FUENTE -->
-  <section class="beneficios-section p-3">
-    <div class="beneficios-wrapper">
-
-      <!-- IMAGEN IZQUIERDA -->
-      <div class="beneficios-img">
-        <img src="img/niños_home.png" alt="Niños bebiendo agua">
-      </div>
-
-      <!-- RECUADRO + TEXTO -->
-      <div class="beneficios-box">
-        <h2>Beneficios del agua<br>purificada</h2>
-
-        <ul>
-          <li>La diferencia se siente en tu cuerpo.</li>
-          <li>Mejora el sabor del agua y de tus alimentos.</li>
-          <li>Reduce la presencia de contaminantes.</li>
-          <li>Contribuye a una hidratación más saludable.</li>
-          <li>Es más económica y ecológica que el agua embotellada.</li>
-          <li>Ideal para niños, adultos mayores y toda la familia.</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
 
 
 
 
 
-  <!-- SECCIÓN PRODUCTOS -->
-  <section class="solutions-section">
-    <div class="container">
 
-      <!-- TÍTULO + TEXTO -->
-      <div class="text-center mb-5">
-        <h2 class="solutions-title">Soluciones de agua purificada</h2>
-        <p class="solutions-subtitle">
-          Desde purificadores domésticos y empresas hasta purificadores de ozono, en AcquabySalud contamos
-          con equipos que se adaptan a tu espacio, tu estilo de vida y tu consumo.
-          Explora nuestras opciones y encuentra el dispositivo ideal para ti.
-        </p>
-      </div>
+  <section id="quienes-somos-2">
+    <div class="container bg-light">
+      <div class="row justify-content-center text-center g-4">
+        <img src="img/fuentedepie_2.png" class="fuente_pie" alt="" style="width: 40%;">
+        <div class="col-lg-8">
+          <h2 class="quality-title">Beneficios de Acqua Eternity</h2>
+          <p>
+            Además de ofrecer agua realmente pura, destaca por su estética minimalista y sofisticada, diseñada para
+            integrarse en cualquier ambiente.
+            Su acabado moderno, líneas limpias y tamaño ideal la convierten en un elemento funcional y decorativo al
+            mismo
+            tiempo. <br>
 
-      <!-- TARJETAS -->
-      <div class="row g-4 justify-content-center">
+            La torre incluye: <br> <br>
 
-        <!-- CARD 1 -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <article class="solution-card">
-            <div class="solution-img-wrap">
-              <img src="/Tarjetas/fuente.png" alt="Dispositivo Acqua Eternity">
-            </div>
-            <h3 class="solution-name">Dispositivo Acqua Eternity</h3>
-            <p class="solution-id">Identifier number</p>
-            <a href="#" class="solution-btn">
-              <span class="arrow">→</span> Más info
-            </a>
-          </article>
+            → Tres temperaturas: fría, natural y caliente <br>
+
+            → Sistema de filtración avanzado <br>
+
+            → Panel frontal con indicador digital <br>
+
+            → Funcionamiento silencioso <br>
+
+            → Ahorro energético <br> <br>
+
+            Un equipo que combina tecnología, estilo y durabilidad.
+          </p>
         </div>
-
-        <!-- CARD 2 (CON DESCUENTO) -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <article class="solution-card position-relative">
-            <div class="discount-badge">10%</div>
-
-            <div class="solution-img-wrap">
-              <img src="/Tarjetas/IMAGEN Pure water sobremesa  3.png" alt="Dispositivo Acqua essence">
-            </div>
-            <h3 class="solution-name">Dispositivo Acqua essence</h3>
-            <p class="solution-id">Identifier number</p>
-            <a href="#" class="solution-btn">
-              <span class="arrow">→</span> Más info
-            </a>
-          </article>
+       <div class="text-center" style="margin-bottom: 50px;">
+          <a href="contacto.html" class="btn-quality">
+            <span class="arrow">→</span> Solicita demo
+          </a>
         </div>
-
-        <!-- CARD 3 -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <article class="solution-card">
-            <div class="solution-img-wrap">
-              <img src="/Tarjetas/osmosis.png" alt="Dispositivo bajo fregadero">
-            </div>
-            <h3 class="solution-name">Dispositivo “nombre” Bajo fregadero</h3>
-            <p class="solution-id">Identifier number</p>
-            <a href="#" class="solution-btn">
-              <span class="arrow">→</span> Más info
-            </a>
-          </article>
+        <div class="text-center p-0">
+          <img src="img/fuente_colegio.png" alt="" class="img-fluid">
         </div>
-
-        <!-- CARD 4 -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <article class="solution-card">
-            <div class="solution-img-wrap">
-              <img src="/Tarjetas/ozono.png" alt="Dispositivos de Ozono">
-            </div>
-            <h3 class="solution-name">Dispositivos de Ozono</h3>
-            <p class="solution-id">Identifier number</p>
-            <a href="#" class="solution-btn">
-              <span class="arrow">→</span> Más info
-            </a>
-          </article>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- BANNER -->
-  <div class="text-center"> <!-- opcional, solo si quieres centrar -->
-    <img src="img/banner.png" class="img-fluid" style="max-width: 80%;" alt="">
-  </div>
+
 
 
 
@@ -346,27 +358,28 @@
 
       <!-- TÍTULO -->
       <div class="text-center mb-4">
-        <h2 class="faq-title">Todo lo que necesitas saber</h2>
+        <h2 class="faq-title">Más ahorro, más comodidad, más sostenibilidad</h2>
         <p class="faq-subtitle">
-          Resolvemos tus dudas de forma rápida y clara. Descubre cómo funcionan nuestros purificadores,
-          sus beneficios y por qué AcquaBySalud es la mejor opción para tu hogar u oficina.
+          Con nuestra fuente de pie eliminas los gastos constantes de garrafones y evitas generar residuos plásticos.
+          Un solo dispositivo sustituye cientos de botellas y entregas, ahorrando dinero y reduciendo tu impacto
+          ambiental.
         </p>
       </div>
+
 
       <!-- ACORDEONES -->
       <div class="faq-container">
 
         <!-- ITEM 1 (ABIERTO) -->
-        <div class="faq-item open">
+        <div class="faq-item">
           <div class="faq-question">
             <span class="arrow">↓</span>
-            ¿Por qué elegir nuestros purificadores de agua?
+            ¿Cómo funciona la fuente de pie de agua purificada?
           </div>
           <div class="faq-answer">
-            Nuestros dispositivos utilizan tecnología avanzada de filtración para ofrecerte un agua más pura,
-            ligera y libre de contaminantes como cloro, sedimentos y metales pesados. Además, son equipos
-            de bajo consumo, silenciosos y diseñados para integrarse con estilo en cualquier espacio. Con
-            AcquaBySalud, eliges salud, comodidad y un servicio técnico siempre disponible.
+            Nuestra fuente de pie se conecta directamente a la red de agua y utiliza un sistema avanzado de filtración
+            que elimina impurezas, cloro, sedimentos y microorganismos. El agua se purifica en tiempo real,
+            permitiéndote disfrutar de agua segura, fresca y de excelente sabor durante todo el día.
           </div>
         </div>
 
@@ -374,11 +387,12 @@
         <div class="faq-item">
           <div class="faq-question">
             <span class="arrow">↓</span>
-            ¿Qué mantenimiento necesitan los equipos?
+            ¿Realmente no necesita garrafones?
           </div>
           <div class="faq-answer">
-            Los equipos requieren revisiones periódicas para garantizar su rendimiento óptimo. Normalmente
-            solo es necesario cambiar los filtros y realizar una limpieza técnica ocasional.
+            Así es. Esta fuente funciona sin garrafones, sin cargas pesadas y sin necesidad de almacenamiento. Elimina
+            por completo el uso de plástico, reduce gastos y evita las molestias de pedir, cargar o cambiar garrafones.
+            Es una solución más ecológica, práctica y económica.
           </div>
         </div>
 
@@ -386,11 +400,12 @@
         <div class="faq-item">
           <div class="faq-question">
             <span class="arrow">↓</span>
-            ¿Los purificadores sirven para oficinas y hogares?
+            ¿Qué mantenimiento necesita?
           </div>
           <div class="faq-answer">
-            Sí, nuestros purificadores están diseñados para adaptarse a cualquier entorno: hogares, oficinas,
-            locales comerciales y más.
+            El mantenimiento es mínimo. Los filtros se cambian aproximadamente cada 6 a 12 meses (según el uso) y
+            nosotros nos encargamos de todo el proceso. Además, la fuente está diseñada para ser duradera, silenciosa y
+            de bajo consumo energético, por lo que tendrás un equipo confiable por muchos años.
           </div>
         </div>
 
@@ -398,11 +413,12 @@
         <div class="faq-item">
           <div class="faq-question">
             <span class="arrow">↓</span>
-            ¿Qué beneficios tiene el agua purificada?
+            ¿Es adecuada para hogares, oficinas y negocios?
           </div>
           <div class="faq-answer">
-            Mejora el sabor del agua, elimina contaminantes, reduce residuos plásticos y favorece una
-            hidratación más saludable.
+            Totalmente. Su diseño elegante y compacto permite integrarla en cualquier ambiente: cocinas, salas,
+            oficinas, escuelas, clínicas o comercios. Ofrece agua fría, natural y caliente, lo que la hace perfecta para
+            familias, empleados y clientes que necesiten hidratación de calidad durante todo el día.
           </div>
         </div>
 
@@ -648,7 +664,7 @@
   </div>
 
   <!-- BOTÓN FLOTANTE WHATSAPP -->
-  <a href="https://wa.me/'34655655655'" target="_blank" id="whatsappBtn">
+  <a href="https://wa.me/+34699027867" target="_blank" id="whatsappBtn">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="45">
   </a>
 

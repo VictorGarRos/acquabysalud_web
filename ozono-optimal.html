@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Acqua by Salud | Agua Pura</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- (Opcional) Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+
+<style>
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 90vh;
+    color: var(--acqua-text-light);
+    display: flex;
+
+    background-image:
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(3, 35, 100, 0.85)),
+      url("/img/hero_optimal.png");
+    /* <-- cambia por tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding-top: 100px;
+  }
+
+  .hero .hero-content {
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+    /* centra horizontalmente */
+    align-items: center;
+    /* centra verticalmente si tienen altura distinta */
+    margin-top: 50px;
+  }
+
+  /* SECCIÓN POR QUÉ ELEGIR */
+  .why-section {
+    /*background: linear-gradient(to bottom, #0a56d1, #07429f);*/
+    color: #fff;
+    padding: 3.5rem 0;
+    text-align: center;
+    margin-top: -100px;
+    z-index: 50;
+    position: relative;
+  }
+
+  .features-bar {
+    background: transparent;
+    padding: 0;
+    margin-top: -40px;
+    /* opcional si quieres que suba un poco */
+  }
+
+
+
+
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero .hero-content {
+      position: relative;
+      z-index: 1;
+      justify-content: center;
+      /* centra horizontalmente */
+      align-items: center;
+      /* centra verticalmente si tienen altura distinta */
+      padding-top: 10px !important;
+    }
+  }
+</style>
+
+
+<body>
+
+  <div class="fixed-top">
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <div class="container d-flex justify-content-center align-items-center flex-wrap gap-2">
+        <div class="d-flex flex-wrap gap-3">
+          <span><i class="bi bi-telephone"></i> Teléfono: 699 027 867</span>
+          <span><i class="bi bi-envelope"></i> <a href="mailto:info@acquabysalud.es">info@acquabysalud.es</a></span>
+        </div>
+
+        <a href="trabaja-con-nosotros.html" class="text-uppercase" style="color: rgb(83, 222, 32);">
+          <i class="fa-solid fa-arrow-right"></i></i> <b>Trabaja con nosotros</b>
+        </a>
+      </div>
+    </div>
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg main-nav">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <!-- LOGO -->
+          <img src="img/logo_wh.png" alt="Acqua by Salud"> <!-- cambia la ruta -->
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item dropdown custom-dd">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                Dispositivos y Filtración
+              </a>
+
+              <ul class="dropdown-menu custom-menu">
+                <li>
+                  <a class="custom-item" href="acqua-eternity.html">
+                    <img src="img/icono_fuente.png" alt="">
+                    <span>→ Dispositivo Acqua Eternity</span>
+                  </a>
+                </li>
+
+                <li>
+                  <div class="custom-divider"></div>
+                </li>
+
+                <li>
+                  <a class="custom-item" href="acqua-essence.html">
+                    <img src="img/icono_sobremesa.png" alt="">
+                    <span>→ Dispositivo Acqua Essence</span>
+                  </a>
+                </li>
+
+                <li>
+                  <div class="custom-divider"></div>
+                </li>
+
+                <li>
+                  <a class="custom-item" href="osmosis.html">
+                    <img src="img/icono_osmosis.png" alt="">
+                    <span>→ Dispositivo Osmósis</span>
+                  </a>
+                </li>
+
+                <li>
+                  <div class="custom-divider"></div>
+                </li>
+
+                <li>
+                  <a class="custom-item" href="ozono-optimal.html">
+                    <img src="img/icono_ozono.png" alt="">
+                    <span>→ Ozono Optimal</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">
+                Contacto
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- SECCIÓN HERO -->
+  <section class="hero" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Texto -->
+        <div class="col-lg-6 hero-content" style="padding-top: 80px;">
+          <img src="img/logo_wh.png" alt="Acqua by salud" class="hero-logo">
+          <!-- o puedes usar solo texto:
+          <h2 class="display-5 fw-bold">ACQUA <span class="fw-light">by salud</span></h2> -->
+
+          <h1>Un nueva forma de beber salud</h1>
+
+          <p class="lead">
+            En AcquabySalud llevamos la mejor tecnología de purificación
+            directamente a tu casa u oficina, para que puedas disfrutar de
+            agua más segura, ligera y saludable todos los días.
+          </p>
+
+          <a href="contacto.html" class="btn-quality">
+            <span class="arrow">→</span> PROBAR AGUA PURIFICADA
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SECCIÓN POR QUÉ ELEGIR ACQUA -->
+  <section class="why-section">
+    <div class="container">
+
+      <div class="features-bar p-3">
+        <div class="container">
+          <div class="features-box d-flex flex-column flex-md-row justify-content-between align-items-center">
+
+            <div class="feature-item text-center">
+              <img src="img/icono_sostenibilidad.png" alt="">
+              <p>Ahorro y<br>Sostenibilidad</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="feature-item text-center">
+              <img src="img/icono_instalacion.png" alt="">
+              <p>Instalación y<br>Soporte</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="feature-item text-center">
+              <img src="img/icono_equipos.png" alt="">
+              <p>Equipos diseñados<br>para durar</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+  </section>
+
+
+  <!-- SECCIÓN COCINA -->
+  <section class="quality-section" style="margin-bottom: 50px;">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <!-- TEXTO -->
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h2 class="quality-title">
+            Instalación sencilla y segura para tu hogar
+          </h2>
+
+          <p class="quality-text">
+            Instalar un sistema de ozono en casa es un proceso rápido, limpio y completamente seguro. Nuestros equipos
+            están diseñados para integrarse fácilmente en cualquier espacio, sin obras ni complicaciones. Solo necesitas
+            una toma de corriente y el dispositivo estará listo para purificar el aire y las superficies de tu hogar.
+            <br>
+            Con una instalación profesional: <br><br>
+
+            → Garantizamos un uso 100% seguro <br>
+            → Configuramos el equipo según el tamaño de tu vivienda <br>
+            → Te explicamos cómo utilizarlo correctamente <br>
+            → Dejas tu hogar protegido desde el primer día <br><br>
+
+            Tecnología avanzada, puesta en marcha sin esfuerzo.
+          </p>
+        </div>
+
+        <!-- IMAGEN -->
+        <div class="col-lg-6">
+          <img src="img/ozono_img.png" alt="Dispensador Acqua" class="quality-img">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="quienes-somos-2">
+    <div class="container bg-light">
+      <div class="row justify-content-center text-center g-4">
+        <img src="img/ozono_prd.png" class="fuente_pie" alt="" style="width: 70%;">
+        <div class="col-lg-8">
+          <h2 class="quality-title">Limpieza segura, natural y eficaz</h2>
+          <p>
+            El ozono es uno de los desinfectantes más potentes que existen, capaz de eliminar bacterias, virus, hongos y
+            malos olores sin dejar residuos químicos. Gracias a su acción natural, limpia y purifica el ambiente de
+            manera profunda, cuidando la salud de tu hogar y de quienes viven en él. <br>
+
+            Con la limpieza con ozono: <br>
+
+            → Desinfectas de forma segura <br>
+            → Eliminas olores y microorganismos <br>
+            → Cuidas a tu familia sin químicos agresivos <br>
+            → Mantienes tu hogar fresco, limpio y saludable <br><br>
+
+            Una solución ecológica, moderna y eficaz para transformar la higiene de tu hogar.
+          </p>
+        </div>
+        <div class="text-center" style="margin-bottom: 50px;">
+          <a href="contacto.html" class="btn-quality">
+            <span class="arrow">→</span> Solicita demo
+          </a>
+        </div>
+        <div class="text-center p-0">
+          <img src="img/ozono_limpieza.png" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- DESPLEGABLE -->
+
+  <section class="faq-section">
+    <div class="container">
+
+      <!-- TÍTULO -->
+      <div class="text-center mb-4">
+        <h2 class="faq-title">Todo lo que necesitas saber</h2>
+        <p class="faq-subtitle">
+          Resolvemos tus dudas de forma rápida y clara. Descubre cómo funcionan nuestros purificadores,
+          sus beneficios y por qué AcquaBySalud es la mejor opción para tu hogar u oficina.
+        </p>
+      </div>
+
+      <!-- ACORDEONES -->
+      <div class="faq-container">
+
+        <!-- ITEM 1 (ABIERTO) -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="arrow">↓</span>
+            ¿Es segura la limpieza con ozono en el hogar?
+          </div>
+          <div class="faq-answer">
+            Sí. El ozono es un desinfectante natural muy potente y, cuando se utiliza correctamente, es totalmente
+            seguro. Desaparece rápidamente tras su uso, sin dejar residuos ni químicos en el ambiente. Nuestros equipos
+            están calibrados para funcionar con los niveles adecuados para el hogar, garantizando una desinfección
+            segura y sin riesgos.
+          </div>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="arrow">↓</span>
+            ¿Qué beneficios aporta el ozono frente a otros métodos de limpieza?
+          </div>
+          <div class="faq-answer">
+            El ozono elimina bacterias, hongos, virus, alérgenos y malos olores de forma mucho más eficaz que los
+            productos tradicionales. No utiliza químicos, no deja restos tóxicos y purifica tanto superficies como el
+            aire, consiguiendo un ambiente fresco, saludable y sin contaminantes.
+          </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="arrow">↓</span>
+            ¿Qué mantenimiento requiere un equipo de ozono?
+          </div>
+          <div class="faq-answer">
+            El mantenimiento es mínimo. Solo necesitas mantener el equipo limpio por fuera y seguir las recomendaciones
+            básicas del fabricante. No requiere recargas ni productos adicionales. Si deseas una revisión periódica,
+            nuestro equipo técnico puede realizarla fácilmente.
+          </div>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="arrow">↓</span>
+            ¿Dónde puedo usar el ozono en casa?
+          </div>
+          <div class="faq-answer">
+            El ozono es ideal para salones, cocinas, dormitorios, baños, armarios e incluso para eliminar olores
+            difíciles en textiles como sofás y colchones. También puede usarse en espacios cerrados como autos o
+            trasteros. Su versatilidad lo convierte en una solución completa para purificar cualquier ambiente del
+            hogar.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!--FORMULARIO-->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-card">
+        <div class="row g-0">
+
+          <!-- COLUMNA FORMULARIO -->
+          <div class="col-lg-6 p-4 p-md-5">
+            <h2 class="contact-title">
+              ¿Tienes dudas o necesitas<br>más información?
+            </h2>
+            <p class="contact-subtitle">
+              Completa el formulario y nuestro equipo te contactará lo antes posible.
+            </p>
+
+            <form class="contact-form">
+              <div class="mb-3">
+                <input type="text" class="form-control contact-input" placeholder="*Nombre">
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control contact-input" placeholder="*Dirección">
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control contact-input" placeholder="*Email">
+              </div>
+              <div class="mb-3">
+                <input type="tel" class="form-control contact-input" placeholder="*Teléfono de contacto">
+              </div>
+              <div class="mb-3">
+                <textarea rows="4" class="form-control contact-textarea"
+                  placeholder="*Cuéntanos en qué podemos ayudarte..."></textarea>
+              </div>
+
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="privacidad">
+                <label class="form-check-label" for="privacidad">
+                  Acepto la política de privacidad
+                </label>
+              </div>
+
+              <button type="submit" class="btn contact-btn">
+                <span class="arrow">→</span> Enviar
+              </button>
+            </form>
+          </div>
+
+          <!-- COLUMNA IMAGEN / DATOS -->
+          <div class="col-lg-6 contact-image">
+            <div class="contact-overlay">
+              <!-- Logo -->
+              <img src="img/logo_wh.png" alt="Acqua by Salud" class="contact-logo">
+
+              <!-- Datos -->
+              <div class="contact-details">
+                <p><i class="bi bi-geo-alt-fill"></i> 28080, Humanes de Madrid, MADRID</p>
+                <p><i class="bi bi-telephone-fill"></i> +34 617 617 177</p>
+                <p><i class="bi bi-envelope-fill"></i> info@acquabysalud.es</p>
+              </div>
+
+              <!-- RRSS -->
+              <div class="contact-social">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- SECCIÓN GOOGLE RESEÑAS -->
+  <section class="reviews-section">
+    <div class="container">
+
+      <!-- TÍTULO -->
+      <div class="text-center mb-5">
+        <h2 class="reviews-title">Lo que opinan de nosotros</h2>
+      </div>
+
+      <!-- AVATARES -->
+      <div class="row text-center justify-content-center mb-4">
+
+        <!-- USER 1 -->
+        <div class="col-12 col-md-4 mb-4">
+          <div class="review-header">
+            <div class="avatar">A</div>
+            <div class="review-user">
+              <img src="img/google-icon.png" alt="" class="google-icon">
+              <span><b>A B S</b></span> <img src="img/google_id.png" class="google-icon-btn" alt="">
+            </div>
+          </div>
+
+          <div class="review-card" style="text-align: center;">
+            <div class="stars">★★★★★</div>
+            <p>
+              Me instalaron una fuente de ósmosis porque estaba harto de no tener agua fría en la nevera.
+              Es lo mejor que he hecho, ahora tengo siempre agua fría y además está buenísima.
+              Muy profesionales, me la instalaron muy pronto y el precio muy bueno.
+            </p>
+          </div>
+        </div>
+
+        <!-- USER 2 -->
+        <div class="col-12 col-md-4 mb-4">
+          <div class="review-header">
+            <div class="avatar">S</div>
+            <div class="review-user">
+              <img src="img/google-icon.png" alt="" class="google-icon">
+              <span><b>Sara Pavón garcía</b></span> <img src="img/google_id.png" class="google-icon-btn" alt="">
+            </div>
+          </div>
+
+          <div class="review-card" style="text-align: center;">
+            <div class="stars">★★★★★</div>
+            <p>
+              Gran profesionalidad me an demostrado con todas las compliciones q hubo para instalar,
+              si tengo q volver a elegir sin duda los llamo, xr sus empleados tan amables, atentos
+              y grandes profesionales ole y ole.
+            </p>
+          </div>
+        </div>
+
+        <!-- USER 3 -->
+        <div class="col-12 col-md-4 mb-4">
+          <div class="review-header">
+            <div class="avatar">P</div>
+            <div class="review-user">
+              <img src="img/google-icon.png" alt="" class="google-icon">
+              <span><b>Pilar Durán</b></span> <img src="img/google_id.png" class="google-icon-btn" alt="">
+            </div>
+          </div>
+
+          <div class="review-card" style="text-align: center;">
+            <div class="stars">★★★★★</div>
+            <p>
+              Muy buenos profesionales. Han instalado la máquina en pocos minutos y sin molestias de ningún tipo.
+              Sin duda un acierto haber contratado este servicio ya que es súper cómodo tener siempre agua tan
+              accesible.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SECCIÓN INFERIOR -->
+      <div class="text-center mt-4">
+        <h4 class="business-name" style="margin-top: 150px;">Acqua by salud</h4>
+
+        <div class="rating-line">
+          <i class="bi bi-shop"></i>
+          <span class="rating-number">4.6</span>
+          <span class="stars-yellow">★★★★★</span>
+        </div>
+
+        <a href="#" class="review-btn">
+          <span class="arrow">→</span> Déjanos una reseña
+        </a>
+        <img src="img/google_id.png" class="google-icon-btn" alt="">
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <!-- FOOTER -->
+
+  <footer class="acqua-footer">
+    <div class="container">
+
+      <!-- FILA SUPERIOR -->
+      <div class="row align-items-center footer-top">
+
+        <!-- LOGO -->
+        <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+          <img src="img/logo_wh.png" alt="ACQUA By Salud" class="footer-logo">
+        </div>
+
+        <!-- DIRECCIÓN + TELÉFONO -->
+        <div class="col-lg-6 footer-contact text-center text-lg-end">
+          <div class="footer-info">
+            <i class="bi bi-geo-alt-fill"></i>
+            Calle del pico Santa Catalina, 29, Humanes de Madrid, 28970, Madrid
+          </div>
+          <div class="footer-info">
+            <i class="bi bi-telephone-fill"></i>
+            +34 914 823 484
+          </div>
+
+          <!-- ICONOS SOCIALES -->
+          <div class="footer-social mt-3">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- LÍNEA DIVISORIA -->
+      <div class="footer-divider"></div>
+
+      <!-- ENLACES INFERIORES -->
+      <div class="footer-bottom text-center">
+        <a href="#">Aviso Legal</a>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Condiciones Generales</a>
+        <a href="#">Política de Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- WIDGET DE ACCESIBILIDAD -->
+  <div id="accesibilidadWidget">
+    <i class="fa-brands fa-accessible-icon"></i>
+  </div>
+
+  <div id="accesibilidadMenu">
+    <button onclick="ajustarTexto(1)">Aumentar texto</button>
+    <button onclick="ajustarTexto(-1)">Disminuir texto</button>
+    <button onclick="toggleGrises()">Escala de grises</button>
+    <button onclick="toggleContraste()">Alto contraste</button>
+    <button onclick="toggleFondo()">Fondo claro</button>
+    <button onclick="resetAccesibilidad()">Restablecer</button>
+  </div>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="https://wa.me/+34699027867" target="_blank" id="whatsappBtn">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="45">
+  </a>
+
+  <!-- BOTÓN SCROLL UP -->
+  <div id="scrollTopBtn">
+    <i class="fa-solid fa-chevron-up"></i>
+  </div>
+
+
+  <script src="js/javascript.js"></script>
+  <!-- Bootstrap JS -->
+  <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
