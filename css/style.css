@@ -165,7 +165,7 @@ body {
   border-radius: 20px;
   padding: 25px 40px;
   color: #fff;
-  gap: 25px;
+  gap: 125px;
   border-radius: 90px;
 }
 
@@ -1119,19 +1119,12 @@ body {
   }
 
 
-  .features-bar {
-    background: transparent;
-    padding: 0;
-    margin-top: -10px;
-    /* opcional si quieres que suba un poco */
-  }
-
   .features-box {
-    background: #274a84;
+    background: #4b30c1;
     border-radius: 20px;
     padding: 25px 25px;
     color: #fff;
-    gap: 10px;
+    gap: 5px;
   }
 
   /* SECCIÓN POR QUÉ ELEGIR */
