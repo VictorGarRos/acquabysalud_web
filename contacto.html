@@ -19,10 +19,24 @@
 </head>
 
 <style>
- /* Responsive */
+
+  .logo-quienes{
+    width: 20%;
+  }
+
+  /* Responsive */
   @media (max-width: 768px) {
-    .contact-section {
-      margin-top: 100px !important;
+    
+    .logo-quienes{
+      width: 70%;
+    }
+
+  }
+
+  @media (max-width: 576px) {
+    .logo-quienes {
+      width: 70%;
+      /* Más grande en móviles */
     }
   }
 </style>
@@ -128,11 +142,16 @@
   </div>
 
 
+  <section>
+    <div class="text-center" style="padding-top: 180px;">
+      <img src="img/logo_navbar.png" alt="" class="img-fluid logo-quienes">
+    </div>
+  </section>
 
 
   <!--FORMULARIO-->
-  <section class="contact-section" style="margin-top: 150px;">
-    
+  <section class="contact-section p-3">
+
     <div class="container">
       <div class="text-center"><i class="fa-solid fa-2x fa-headset" style="color: #1B4D8E;"></i></div>
       <h2 style="text-align: center; color: #1B4D8E; padding-bottom: 30px;"><b>¡Te asesoramos!</b></h2>
