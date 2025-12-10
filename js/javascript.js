@@ -55,52 +55,89 @@ function resetAccesibilidad() {
 
 const scrollBtn = document.getElementById("scrollTopBtn");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-      scrollBtn.classList.add("show");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    scrollBtn.classList.add("show");
+  } else {
+    scrollBtn.classList.remove("show");
+  }
+});
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+// Scroll suave a formulario desde botones "Aplicar"
+document.querySelectorAll(".btn-aplicar").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    var puesto = this.getAttribute("data-puesto");
+    var selectPuesto = document.getElementById("puesto");
+    selectPuesto.value = puesto;
+
+    document.getElementById("formulario").scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
+
+// Validación básica de formulario + mensaje de éxito (frontend)
+(function () {
+  const form = document.getElementById("form-trabaja");
+  const mensajeExito = document.getElementById("mensaje-exito");
+
+  form.addEventListener("submit", function (event) {
+    // Validación nativa de Bootstrap
+    if (!form.checkValidity()) {
+      event.preventDefault();
+      event.stopPropagation();
     } else {
-      scrollBtn.classList.remove("show");
+      // Aquí iría tu lógica real de envío (fetch, AJAX, etc.)
+      event.preventDefault(); // evitar envío real en este ejemplo
+      mensajeExito.classList.remove("d-none");
+      form.reset();
+      form.classList.remove("was-validated");
+      return;
     }
+    form.classList.add("was-validated");
+  });
+})();
+
+
+
+// COOKIES
+document.addEventListener("DOMContentLoaded", function () {
+  const overlay = document.getElementById("cookie-overlay");
+  const btnAccept = document.getElementById("cookie-accept");
+  const btnReject = document.getElementById("cookie-reject");
+  const btnCustomize = document.getElementById("cookie-customize");
+
+  // Mostrar popup si aún no hay decisión
+  if (!localStorage.getItem("cookie_consent")) {
+    overlay.style.display = "flex";
+  }
+
+  // Aceptar todas las cookies
+  btnAccept.addEventListener("click", function () {
+    localStorage.setItem("cookie_consent", "all");
+    overlay.style.display = "none";
   });
 
-  scrollBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+  // Rechazar todas las cookies
+  btnReject.addEventListener("click", function () {
+    localStorage.setItem("cookie_consent", "none");
+    overlay.style.display = "none";
   });
 
-  // Scroll suave a formulario desde botones "Aplicar"
-    document.querySelectorAll(".btn-aplicar").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        var puesto = this.getAttribute("data-puesto");
-        var selectPuesto = document.getElementById("puesto");
-        selectPuesto.value = puesto;
+  // Personalizar (puedes llevar a una página o abrir otro modal)
+  btnCustomize.addEventListener("click", function () {
+    // Ejemplo: redirigir a página de configuración
+    window.location.href = "/politica-de-cookies";
+    // y opcionalmente:
+    // localStorage.setItem("cookie_consent", "customize");
+    overlay.style.display = "none";
+  });
+});
 
-        document.getElementById("formulario").scrollIntoView({
-          behavior: "smooth",
-        });
-      });
-    });
-
-    // Validación básica de formulario + mensaje de éxito (frontend)
-    (function () {
-      const form = document.getElementById("form-trabaja");
-      const mensajeExito = document.getElementById("mensaje-exito");
-
-      form.addEventListener("submit", function (event) {
-        // Validación nativa de Bootstrap
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        } else {
-          // Aquí iría tu lógica real de envío (fetch, AJAX, etc.)
-          event.preventDefault(); // evitar envío real en este ejemplo
-          mensajeExito.classList.remove("d-none");
-          form.reset();
-          form.classList.remove("was-validated");
-          return;
-        }
-        form.classList.add("was-validated");
-      });
-    })();

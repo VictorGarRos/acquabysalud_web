@@ -10,6 +10,86 @@ body {
   color: #222;
 }
 
+/* Fondo oscuro detrás del aviso */
+.cookie-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;            /* se muestra por JS */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Tarjeta blanca centrada */
+.cookie-popup {
+  background: #ffffff;
+  max-width: 520px;
+  width: 90%;
+  padding: 24px 28px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.cookie-popup h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+}
+
+.cookie-popup p {
+  margin: 0 0 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Contenedor de botones */
+.cookie-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* Botones base */
+.cookie-actions button {
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  min-width: 110px;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+/* Botón contorno (Customize / Reject) */
+.btn-outline {
+  background: #ffffff;
+  color: #1a73e8;
+  border-color: #1a73e8;
+}
+
+.btn-outline:hover {
+  background: #e8f0fe;
+}
+
+/* Botón principal (Accept All) */
+.btn-primary {
+  background: #1a73e8;
+  color: #ffffff;
+  border-color: #1a73e8;
+}
+
+.btn-primary:hover {
+  background: #1557b0;
+}
+
+
+
 
 /* TOP BAR */
 .top-bar {
@@ -108,6 +188,9 @@ body {
   left: auto;
 }
 
+.banner-index{
+  width: 70%;
+}
 
 /* HERO */
 .hero {
@@ -501,7 +584,7 @@ body {
 /* Botón */
 .solution-btn {
   margin-top: auto;
-  align-self: flex-start;
+  align-self: center;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -559,6 +642,11 @@ body {
   .solution-img-wrap {
     height: 190px;
   }
+
+  .banner-index{
+  width: 90%;
+}
+
 
   .discount-badge {
     left: 10px;
@@ -1236,8 +1324,9 @@ body {
 
 #whatsappBtn {
   position: fixed;
-  bottom: 20px;
+  bottom: 30px;
   right: 20px;
+  width: 60px;
   z-index: 9999;
   padding: 10px;
   border-radius: 50%;
